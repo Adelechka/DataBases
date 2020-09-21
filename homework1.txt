@@ -1,0 +1,22 @@
+	Создание таблицы `groups`
+CREATE TABLE `groups` (
+  `id` int NOT NULL,
+  `name` varchar(45) NOT NULL,
+  `teacher_id` int NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+	Создание таблицы `students`
+CREATE TABLE `students` (
+  `id` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `user_id` int NOT NULL,
+  `groups_id` int NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+	Создание таблицы `teachers`
+CREATE TABLE `teachers` (
+  `id` int NOT NULL,
+  `user_id` int NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
